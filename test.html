@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Modernizr test">
+        <!-- saved from url=(0014)about:internet -->
+        <title>Modernizr test</title>
+        <script src="modernizr-latest.js"></script>
+    </head>
+    
+    <body>
+        
+        <p>Werdykt modernizr: <span id="result"></span></p>
+        
+        <script>
+            
+            var result = document.getElementById("result");
+            
+            if(Modernizr.draganddrop) {
+                result.innerHTML = "Drag and drop OK";
+            }
+            else {
+                result.innerHTML = "Drag and drop bez wsparcia na tej przeglądarce";
+            }
+                
+        </script>
+        
+    </body>
+    
+</html>

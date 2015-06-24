@@ -4,17 +4,71 @@
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Nauka i eksploracja HTML5">
+        <!-- saved from url=(0014)about:internet -->
         <title>HTML5</title>
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js"></script>
     </head>
     
-    <h1>Podstawy HTML5</h1>
-    <p id="pFirst" lang="pl">Paragraf w <strong>HTML5</strong>. <em>lang</em> jest atrybutem informacyjnym. <em>href</em> jest atrybutem funkcjonalnym.</p>
-    <ul>Przydatne linki
-        <li><a href="http://caniuse.com/">Caniuse.com</a></li>
-        <li><a href="http://www.w3.org/TR/html5/">W3 HTML5 spec</a></li>
-        <li><a href="https://html.spec.whatwg.org/multipage/">WHATWG spec</a></li>
-        <li><a href="https://www.webplatform.org/">WebPlatform</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/web/html/reference">Mozilla HTML5 doc</a></li>
-    </ul>
+    <body>
+        <h1>Podstawy HTML5</h1>
+        <p id="pFirst" lang="pl">Paragraf w <strong>HTML5</strong>. <em>lang</em> jest atrybutem informacyjnym. <em>href</em> jest atrybutem funkcjonalnym.</p>
+        
+        <span class="ulDesc">Przydatne linki:</span>
+        <ul>
+            <li><a href="http://caniuse.com/">Caniuse.com</a></li>
+            <li><a href="http://www.w3.org/TR/html5/">W3 HTML5 spec</a></li>
+            <li><a href="https://html.spec.whatwg.org/multipage/">WHATWG spec</a></li>
+            <li><a href="https://www.webplatform.org/">WebPlatform</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/web/html/reference">Mozilla HTML5 doc</a></li>
+            <li><a href="http://validator.w3.org">HTML Validator (old)</a></li>
+            <li><a href="https://validator.w3.org/nu/">HTML Validator (new)</a></li>
+            <li><a href="https://html5.validator.nu/">Żyjący walidator (XHTML5)</a></li>
+            <li><a href="http://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement">GD vs PE</a></li>
+            <li><a href="http://gs.statcounter.com">Statystyki przeglądarek</a></li>
+            <li><a href="www.google.com/analytics">Google Analytics</a></li>
+            <li><a href="http://tinyurl.com/polyfill">Zestaw wypełniaczy</a></li>
+        </ul>
+        
+        <span class="ulDesc">Modele zawartości (dawniej tylko block i inline):</span>
+        <ul>
+            <li>Flow - bieg dokumentów (wszystko z wyjątkiem części Metadata)</li>
+            <li>Metadata - zachowanie strony (np. skrypty, style)</li>
+            <li>Embedded - import mediów</li>
+            <li>Interactive - interakcja użytkownika</li>
+            <li>Heading - nagłówki sekcji</li>
+            <li>Phrasing - podrywa się w dużej mierze z inline</li>
+            <li>Sectioning - podział na sekcje (względem nagłówków); semantic HTML</li>
+        </ul>
+        <a href="http://www.w3.org/TR/html5/dom.html#kinds-of-content">Modele zawartości na W3.org</a>
+        <h2>O tagach</h2>
+        <pre>Preformatowany tekst - wyświetlanie formatowania, przeważnie czcionka monospace. Nie zagnieżdżamy pre w p.</pre>
+        <p>W ul nie może być tekstu luzem, możemy przed ul dać span albo p i oznaczyć taki tag klasą (ewentualnie opakować w div).</p>
+        <p>Przez dodanie:</p>
+        <pre>xmlns=&ldquo;http://www.w3.org/1999/xhtml&rdquo;</pre>
+        <p>do elementu &lt;html&gt; możemy zapewnić standard XHTML5 dla strony, jeśli chcemy zachować ostre reguły dla naszego kodu. W ekstremalnych sytuacjach można zmienić MIME na serwerze na <em>application/xhtml+xml</em> lub <em>application/xml</em>.</p>
+        <small>Small print, napisane tzw. małą czcionką, gdzieś na dole.</small>
+        <hr>
+        <p>To była przerwa tematyczna hr.</p>
+        <s>Tekst, który nie jest już aktualny.</s>
+        <p>Tagi prezentacyjne &lt;b&gt;, &lt;i&gt; przywrócone do łaski w HTML5. Tagi logiczne mogą być pomocne (&lt;em&gt;, &lt;strong&gt;) np. czytnikowi audio, więc trzeba się zastanowić czy przypadkiem nie chodzi nam tylko o stronę wizualną tekstu (którą i tak możemy przedefiniować w CSS).</p>
+        <p>Może być więcej niż jeden nagłówek h1, tylko niech będą na tym samym poziomie struktury. Nie omijamy poziomów nagłówków (np. h1, h2, h4, h6).</p>
+        <p>Sebastian Gulczyński<br>ul. Jana Piekałkiewicza 13<br>61-695 Poznań</p>
+        <address>
+            <a href="mailto:sebastian.gulczynski.poznan@gmail.com">Sebastian Gulczyński</a>
+        </address>
+        <p>J.R.R. Tolkien <cite>Dwie wieże</cite></p>
+        <p>W &lt;a&gt; oficjalnie może być teraz paragraf, obrazy, lista itd.</p>
+        <span class="olDesc">Lista z odwróconą numeracją (atrybut reversed):</span>
+        <ol reversed>
+            <li>Pierwszy?</li>
+            <li>Drugi?</li>
+            <li>Trzeci?</li>
+        </ol>
+        <p>Element embed dla wtyczek. Element wbr zamiast nobr. Można też dać</p>
+        <pre>white-space: nowrap;</pre>
+        <p>do CSS.</p>
+        
+    </body>
     
 </html>
